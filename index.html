@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>律动之境-一个高效简洁的音游下载站</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- For social icons -->
+</head>
+<body>
+
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<div id="app" class="hidden">
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="#" class="logo">律动之境</a>
+            <nav class="main-nav">
+                <a href="#">首页</a>
+                <a href="games.html">游戏列表</a>
+                <a href="#features">本站特色</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>律动之境</h1>
+                <p>一个高效简洁的音游下载站</p>
+                <a href="games.html" class="cta-button">浏览所有游戏</a>
+            </div>
+        </section>
+
+        <section id="features" class="features-section container">
+            <h2 class="section-title anim-on-scroll">本站特色</h2>
+            <div class="features-grid">
+                <div v-for="feature in features" :key="feature.title" class="feature-item anim-on-scroll">
+                    <div class="feature-icon">
+                        <i :class="feature.icon"></i>
+                    </div>
+                    <h3>{{ feature.title }}</h3>
+                    <p>{{ feature.description }}</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="news-section container">
+            <h2 class="section-title anim-on-scroll">最新动态</h2>
+            <div class="news-grid">
+                <div v-for="item in news" :key="item.id" class="news-card anim-on-scroll">
+                    <div class="news-content">
+                        <h4>{{ item.title }}</h4>
+                        <p>{{ item.summary }}</p>
+                        <span class="news-date">{{ item.date }}</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Rhythmix. 保留所有权利。</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

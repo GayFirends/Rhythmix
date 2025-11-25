@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏列表 - Rhythmix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="site-header" style="position: static; background: var(--surface-color);">
+        <div class="nav-container">
+            <a href="index.html" class="logo">RHYTHMIX</a>
+            <nav class="main-nav">
+                <a href="index.html">首页</a>
+                <a href="games.html">游戏列表</a>
+                <a href="index.html#features">本站特色</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title" style="margin-top: 60px;">所有游戏</h1>
+
+            <div class="announcement-section">
+                <p><strong>公告:</strong> 欢迎来到游戏列表！我们将持续更新更多精彩游戏。</p>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="pc">PC端</button>
+                <button class="filter-btn" data-filter="mobile">移动端</button>
+            </div>
+
+            <div id="game-grid" class="game-grid">
+                <!-- 游戏格子将由JavaScript动态添加 -->
+            </div>
+        </div>
+    </main>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">游戏介绍</h2>
+            <p id="modal-description">这里是游戏的介绍内容。</p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Rhythmix. 保留所有权利。</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="games.js"></script>
+
+</body>
+</html>
