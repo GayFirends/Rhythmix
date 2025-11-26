@@ -546,3 +546,28 @@ body {
     color: var(--bg-color);
     box-shadow: 0 0 15px var(--accent-glow);
 }
+
+/* Modal Download Buttons */
+.modal-downloads-container {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.modal-download-btn {
+    flex-grow: 1;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.modal-download-btn:hover {
+    background-color: var(--accent-color-darker);
+    color: #fff;
+}
